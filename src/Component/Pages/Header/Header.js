@@ -60,9 +60,9 @@ const Header = () => {
                 </NavLink>
                 <NavLink
                   className="px-2 fs-5 me-3 text-decoration-none"
-                  to="/blog"
+                  to="/servicemanage"
                 >
-                  Blog
+                 Service Manage
                 </NavLink>
                 <NavLink
                   className="px-2 fs-5 me-3 text-decoration-none"

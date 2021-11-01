@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1000,
+    "placeName": "Dhaka",
+    "description": "my favourite City",
+    "imageURL": "./assets/images/Indonesia.jpg"
+  },
+
+  {
+    "id": 1001,
+    "placeName": "london",
+    "description": "my favourite City",
+    "imageURL": "./assets/images/london.jpg"
+  },
+  {
+    "id": 1003,
+    "placeName": "Brazil",
+    "description": "my favourite City",
+    "imageURL": "./assets/images/brazil.jpg"
+  },
+  {
+    "id": 1004,
+    "placeName": "Nepal",
+    "description": "my favourite City",
+    "imageURL": "./assets/images/nepal.jpg"
+  }
+]
