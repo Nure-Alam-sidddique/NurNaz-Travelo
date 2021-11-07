@@ -24,7 +24,7 @@ const BookingPlace = () => {
   const onSubmit = (data) => {
     data.price = price;
     data.imageURL = imageURL;
-    axios.post("http://localhost:5000/orderConfirm", data).then(res =>
+    axios.post("https://nurnaztravelo.web.app/orderConfirm", data).then(res =>
     {
       if (res.data.insertedId) {
         alert("Data Successfully Send");

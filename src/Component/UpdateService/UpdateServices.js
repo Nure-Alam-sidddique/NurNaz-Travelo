@@ -35,7 +35,7 @@ const UpdateServices = () => {
         e.preventDefault();
     }
     const handleUpdateInfo = e => {
-        const url = `http://localhost:5000/services/${updateId}`;
+        const url = `https://nurnaztravelo.web.app/services/${updateId}`;
         fetch(url, {
           method: "PUT",
           headers: { "content-type": "application/json" },

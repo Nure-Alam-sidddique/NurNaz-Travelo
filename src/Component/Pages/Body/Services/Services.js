@@ -8,15 +8,17 @@ const Services = () => {
   const [placeName, setPlaceName] = useState([]);
     const onSubmit = (data) => {
         // console.log(data);
-      axios.post("http://localhost:5000/services", data).then(res => {
+      axios.post("https://nurnaztravelo.web.app/services", data).then((res) => {
         if (res.data.insertedId) {
           alert("Data SuccessFully Send");
         }
-        });
+      });
         reset();
      } ;
   useEffect(() => {
-  axios("http://localhost:5000/services").then(res=>console.log(res.data))
+  axios("https://nurnaztravelo.web.app/services").then((res) =>
+    console.log(res.data)
+  );
 }, [])
   
     return (
