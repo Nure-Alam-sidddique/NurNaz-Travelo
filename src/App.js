@@ -11,6 +11,7 @@ import ServiceMange from './Component/Pages/Body/ServiceManage/ServiceMange';
 import Services from './Component/Pages/Body/Services/Services';
 import Footer from './Component/Pages/Footer/Footer';
 import Header from './Component/Pages/Header/Header';
+import Banner from './Component/Pages/Home/Banner/Banner';
 import Home from './Component/Pages/Home/Home/Home';
 import Login from './Component/Pages/Login/Login';
 import Myorders from './Component/Pages/Myorders/Myorders';
@@ -23,9 +24,10 @@ function App() {
       <AuthProvider>
         <Router>
           <Header></Header>
+          <Banner></Banner>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/home" component={Home} />
+            <Route exact path="/home" component={Home} />
             <Route path="/about" component={About} />
             <PrivateRoute path="/destination">
               <Destination></Destination>

@@ -4,6 +4,7 @@ import {
   Container, Dropdown, Nav,
   Navbar
 } from "react-bootstrap";
+import { useHistory, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
@@ -12,14 +13,19 @@ import useAuth from '../../../hooks/useAuth';
 const Header = () => {
   const { signInUsingGoogle, user, logOut } = useAuth();
   // console.log("comes from", typeof signInUsingGoogle);
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || '/home';
   const handleGoogle = e => {
-    signInUsingGoogle();
+    signInUsingGoogle().then(result => {
+      history.push(redirect_uri);
+    })
     e.preventDefault();
   }
     return (
       <div>
-        <Navbar bg="dark" expand="lg">
-          <Container fluid>
+        <Navbar bg="dark" expand="lg" >
+          <Container fluid >
             <NavLink
               className="text-white-50 text-decoration-none fs-3 px-2"
               as={HashLink}
@@ -46,17 +52,17 @@ const Header = () => {
                 >
                   About
                 </NavLink>
-                <NavLink
-                  className="px-2 fs-5 me-3 text-decoration-none"
-                  to="/destination"
-                >
-                  Destination
-                </NavLink>
+                  <NavLink
+                    className="px-2 fs-5 me-3 text-decoration-none"
+                    to="/destination"
+                  >
+                    Destination
+                  </NavLink>
                 <NavLink
                   className="px-2 fs-5 me-3 text-decoration-none"
                   to="/myorders"
                 >
-                 MyOrders
+                  MyOrders
                 </NavLink>
 
                 <NavLink
@@ -66,7 +72,7 @@ const Header = () => {
                   Contact
                 </NavLink>
                 {user.email ? (
-                  <span className="text-primary font-Size:18px">
+                  <span className="text-primary fs-5 text-align-center">
                     {user.displayName}
                   </span>
                 ) : (

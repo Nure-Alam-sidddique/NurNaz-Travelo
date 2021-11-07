@@ -29,13 +29,17 @@ const Services = () => {
             placeholder="Place Name"
             {...register("placeName", { required: true, maxLength: 20 })}
           />
+          <input
+             type="date"
+            {...register("date", { required: true })}
+          />
           <textarea
             placeholder="Place Description"
             {...register("description")}
           />
           <input placeholder="Price" type="number" {...register("price")} />
           <input
-            placeholder="./assets/images/photoName(.jpg/.jpeg)"
+            placeholder="image Link"
             {...register("imageURL")}
           />
           <input type="submit" />

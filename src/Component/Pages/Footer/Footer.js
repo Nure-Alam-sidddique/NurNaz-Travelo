@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
       <div>
-        <Row className="h-50 bg-primary mt-4">
+      
+        <Row className="h-50 text-white mt-4" style={{ backgroundColor: "#20232A" }}>
           <Col xs={6} md={3} className="mt-3">
             <h1>NurNaz Travelo</h1>
-            <div>
+            <div className="text-white">
               <p>x flor , 500/D kings road</p>
               <p>NewWork City-1872</p>
               <p>+56870909876</p>
@@ -19,16 +20,16 @@ const Footer = () => {
             <div className="d-flex flex-column">
               <h4>Company</h4>
               <div className="d-flex flex-column">
-                <Link className="text-black text-decoration-none" to="/pricing">
+                <Link className="text-white text-decoration-none" to="/pricing">
                   Pricing
                 </Link>
-                <Link className="text-black text-decoration-none" to="/about">
+                <Link className="text-white text-decoration-none" to="/about">
                   About
                 </Link>
-                <Link className="text-black text-decoration-none" to="/gallery">
+                <Link className="text-white text-decoration-none" to="/gallery">
                   Gallery
                 </Link>
-                <Link className="text-black text-decoration-none" to="/contact">
+                <Link className="text-white text-decoration-none" to="/contact">
                   Contact
                 </Link>
               </div>
@@ -39,16 +40,16 @@ const Footer = () => {
             <div className="d-flex justify-content-evenly">
               <div className="d-flex flex-column">
                 <Link
-                  className="text-black text-decoration-none"
+                  className="text-white text-decoration-none"
                   to="/bangladesh"
                 >
                   Bangladesh
                 </Link>
-                <Link className="text-black text-decoration-none" to="/england">
+                <Link className="text-white text-decoration-none" to="/england">
                   England
                 </Link>
                 <Link
-                  className="text-black text-decoration-none"
+                  className="text-white text-decoration-none"
                   to="/switzerland"
                 >
                   Switzerland
@@ -60,18 +61,18 @@ const Footer = () => {
 
               <div className="d-flex flex-column">
                 <Link
-                  className="text-black text-decoration-none"
+                  className="text-white text-decoration-none"
                   to="/indonesia"
                 >
                   Indronesis
                 </Link>
-                <Link className="text-black text-decoration-none" to="/canada">
+                <Link className="text-white text-decoration-none" to="/canada">
                   Canada
                 </Link>
-                <Link className="text-black text-decoration-none" to="/italy">
+                <Link className="text-white text-decoration-none" to="/italy">
                   Italy
                 </Link>
-                <Link className="text-black text-decoration-none" to="/india">
+                <Link className="text-white text-decoration-none" to="/india">
                   India
                 </Link>
               </div>
@@ -86,17 +87,17 @@ const Footer = () => {
               />
               <img
                 className="h-25 w-25 m-2 rounded"
-                src="../../../assets/images/india.jpeg"
+                src="../../../assets/images/Maldevis.jpeg"
               />
             </div>
             <div className="d-flex flex-row justify-content-center">
               <img
                 className="h-25 w-25 m-2 rounded"
-                src="../../../assets/images/india.jpeg"
+                src="../../../assets/images/misor.jpeg"
               />
               <img
                 className="h-25 w-25 m-2 rounded"
-                src="../../../assets/images/india.jpeg"
+                src="../../../assets/images/italy.jpg"
               />
             </div>
           </Col>
@@ -104,7 +105,7 @@ const Footer = () => {
           <div className="text-align-center mb-2 text-white">
             <p>
               Copyright ©2021 All rights reserved | This template is made with
-              by Colorlib
+              by NurNazTravleo
             </p>
           </div>
         </Row>

@@ -37,9 +37,9 @@ const ServiceMange = () => {
                     natural lead-in to additional content. This content is a
                     little bit longer.
                   </Card.Text>
-                  <Button variant="danger" onClick={() => handleDelete(place._id)} className="bg-danger">Delete</Button>
+                  <Button variant="danger" onClick={() => handleDelete(place._id)} className="bg-danger text-white rounded border-0 px-4 py-1">Delete</Button>
                 <Link to={`/services/update/${place._id}`}>
-                  <Button variant='success' className="bg-success ms-2">Update</Button>
+                  <Button variant='success' className="bg-success ms-2 text-white rounded border-0 px-4 py-1">Update</Button>
                 </Link>
                 </Card.Body>
               </Card>
