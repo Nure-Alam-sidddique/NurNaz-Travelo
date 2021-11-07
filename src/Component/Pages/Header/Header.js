@@ -1,14 +1,13 @@
 import React from 'react';
 import {
   Button,
-  Container,
-  Form,
-  FormControl,
-  Nav,
+  Container, Dropdown, Nav,
   Navbar
 } from "react-bootstrap";
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
+
 
 const Header = () => {
   const { signInUsingGoogle, user, logOut } = useAuth();
@@ -23,7 +22,8 @@ const Header = () => {
           <Container fluid>
             <NavLink
               className="text-white-50 text-decoration-none fs-3 px-2"
-              to="/home"
+              as={HashLink}
+              to="/home#home"
             >
               NurNaz Travelo
             </NavLink>
@@ -54,37 +54,66 @@ const Header = () => {
                 </NavLink>
                 <NavLink
                   className="px-2 fs-5 me-3 text-decoration-none"
-                  to="/services"
+                  to="/myorders"
                 >
-                  Services
+                 MyOrders
                 </NavLink>
-                <NavLink
-                  className="px-2 fs-5 me-3 text-decoration-none"
-                  to="/servicemanage"
-                >
-                 Service Manage
-                </NavLink>
+
                 <NavLink
                   className="px-2 fs-5 me-3 text-decoration-none"
                   to="/contact"
                 >
                   Contact
                 </NavLink>
-                {user.email ? <span className="text-white">{ user.displayName}</span>: <span></span> }
-                
+                {user.email ? (
+                  <span className="text-primary font-Size:18px">
+                    {user.displayName}
+                  </span>
+                ) : (
+                  <span></span>
+                )}
               </Nav>
 
-                {user.email? <Button onClick={logOut}>Logout</Button>: <Button onClick={handleGoogle}>Sign In</Button>}
-             
-              <Form className="d-flex">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
+              {user.email && (
+                <Dropdown>
+                  <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                    Admin
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">
+                      {user.email && (
+                        <NavLink
+                          className="px-2 fs-5 me-3 text-decoration-none"
+                          to="/services"
+                        >
+                          Add Services
+                        </NavLink>
+                      )}
+                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">
+                      {user.email && (
+                        <NavLink
+                          className="px-2 fs-5 me-3 text-decoration-none"
+                          to="/servicemanage"
+                        >
+                          Service Manage
+                        </NavLink>
+                      )}
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              )}
+              {user.email ? (
+                <Button onClick={logOut}>Logout</Button>
+              ) : (
+                <Button
+                  className={{ marginRight: "20px" }}
+                  onClick={handleGoogle}
+                >
+                  Sign In
+                </Button>
+              )}
             </Navbar.Collapse>
           </Container>
         </Navbar>

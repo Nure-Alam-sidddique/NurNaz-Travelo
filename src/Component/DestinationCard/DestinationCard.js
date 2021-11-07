@@ -1,18 +1,22 @@
-
-import axios from 'axios';
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const DestinationCard = ({ destination }) => {
-  const [place, setPlace] = useState({});
-  console.log(destination);
-  const handleBooking = data=> {
-    const url = `http://localhost:5000/booking`;
-    axios.post(url, data).then(res => setPlace(res.data));
-    // e.preventDefault();
-  }
-  
+  // const [place, setPlace] = useState({});
+  // console.log(destination);
+  // const handleBooking = data=> {
+  //   const url = `https://whispering-fortress-90757.herokuapp.com/booking`;
+  //   axios.post(url, data).then(res => {
+  //     // console.log(res.data);
+  //     if (res.data.insertedId) {
+  //       alert("Booking Successfully");
+  //     }
+  //       // setPlace(res.data);
+  //   });
+  //   // e.preventDefault();
+  // }
+  // console.log( "comes from card Detailes ", destination.imageURL);
     return (
       <div>
         <Col >
@@ -25,9 +29,10 @@ const DestinationCard = ({ destination }) => {
             <Card.Body>
               <Card.Title>{destination.placeName}</Card.Title>
               <Card.Text>{destination.description}</Card.Text>
-              <Link to={`/booking/${destination.id}`}>
-                <Button onClick={() => handleBooking(destination.id)}>
-                  Booking{" "}
+              <Card.Text>Tour Cost :$<span> {destination.price}</span></Card.Text>
+              <Link to={`/booking/${destination._id}`}>
+                <Button /*onClick={() => handleBooking(destination._id)}*/>
+                  Booking
                 </Button>
               </Link>
             </Card.Body>

@@ -1,9 +1,18 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
+import './PopularPlace.css';
 
 const PopularPlace = () => {
+  const [places, setPlace] = useState([]);
+  useEffect(() => {
+     axios("https://whispering-fortress-90757.herokuapp.com/services").then(
+       (res) => setPlace(res.data)
+     );
+  },[])
+ 
     return (
-      <div>
+      <section>
         <div>
           <h1>Popular Palce</h1>
           <p>
@@ -13,26 +22,25 @@ const PopularPlace = () => {
           </p>
         </div>
         <Row xs={1} md={4} className="g-4">
-          {Array.from({ length: 4 }).map((_, idx) => (
-            <Col>
-              <Card>
-                <Card.Img
-                  variant="top"
-                  src="https://www.picsofasia.com/wp-content/uploads/2019/10/cropped-DSCF1599-3.jpg"
-                />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </Card.Text>
-                </Card.Body>
+          {places.slice(0, 8).map((place) => (
+            <Col key={place._id}>
+              <Card className="h-50">
+                {/* <Card.Img variant="top" src={place.imageURL} />
+                <Card.Body className={{zindexPopover: 1070}}>{place.placeName}</Card.Body> */}
+                <figure className="position-relative">
+                  <img
+                    style={{width:"100%", height: "200px"}}
+                    src={place.imageURL}
+                    alt={place.placeName}
+                    className="img-fluid"
+                  />
+                  <figcaption>{place.placeName}</figcaption>
+                </figure>
               </Card>
             </Col>
           ))}
         </Row>
-      </div>
+      </section>
     );
 };
 

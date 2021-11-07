@@ -1,27 +1,73 @@
 [
   {
-    "id": 1000,
-    "placeName": "Dhaka",
-    "description": "my favourite City",
-    "imageURL": "./assets/images/Indonesia.jpg"
+    "key": "AMERICA001",
+    "placeName": "America",
+    "price": 1500,
+    "description": "The Granite State’s White Mountains are THE place to be come leaf-peeping season",
+    "imageURL": "./assets/images/america.jpeg"
   },
 
   {
-    "id": 1001,
-    "placeName": "london",
-    "description": "my favourite City",
-    "imageURL": "./assets/images/london.jpg"
-  },
-  {
-    "id": 1003,
+    "key": "BRAZIL002",
     "placeName": "Brazil",
-    "description": "my favourite City",
-    "imageURL": "./assets/images/brazil.jpg"
+    "price": 1200,
+    "description": "visitors from all around the world converge on the rim of Crater Lake to stare down upon its pristine surface",
+    "imageURL": "./assets/images/brazil.jpeg"
   },
   {
-    "id": 1004,
+    "key": "BRAZIL003",
+    "placeName": "Brazil",
+    "price": 1200,
+    "description": "The Palouse’s most recognizable feature is its loess hills—whimsical rolling knolls formed by wind-blown sediment",
+    "imageURL": "./assets/images/brazil2.jpeg"
+  },
+  {
+    "key": "NEPAL004",
     "placeName": "Nepal",
-    "description": "my favourite City",
+    "price": 500,
+    "description": "Nepal is a surprisingly diverse country that attracts visitors for many reasons.",
     "imageURL": "./assets/images/nepal.jpg"
+  },
+  {
+    "key": "NEPAL005",
+    "placeName": "Nepal",
+    "price": 600,
+    "description": "Nepal is a surprisingly diverse country that attracts visitors for many reasons.",
+    "imageURL": "./assets/images/nepal2.jpeg"
+  },
+  {
+    "key": "MALDIVES006",
+    "placeName": "Maldevies",
+    "price": 1000,
+    "description": "Maldevies is a surprisingly diverse country that attracts visitors for many reasons.",
+    "imageURL": "./assets/images/maldevis.jpeg"
+  },
+  {
+    "key": "MALDIVES007",
+    "placeName": "Maldeives",
+    "price": 1000,
+    "description": " Maldeives is a surprisingly diverse country that attracts visitors for many reasons.",
+    "imageURL": "./assets/images/nepal.jpg"
+  },
+  {
+    "key": "ROME008",
+    "placeName": "Rome",
+    "price": 1300,
+    "description": "Rome is a surprisingly diverse country that attracts visitors for many reasons.",
+    "imageURL": "./assets/images/rome.jpg"
+  },
+  {
+    "key": "MISOR009",
+    "placeName": "Misor",
+    "price": 1800,
+    "description": "Misor is a surprisingly diverse country that attracts visitors for many reasons.",
+    "imageURL": "./assets/images/misor.jpeg"
+  },
+  {
+    "key": "ITALY",
+    "placeName": "Italy",
+    "price": 1600,
+    "description": "Italy is a surprisingly diverse country that attracts visitors for many reasons.",
+    "imageURL": "./assets/images/italy.jpg"
   }
 ]

@@ -1,49 +1,48 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-
+import banner1 from '../../../../BannerImage/banner1.jpeg';
+import banner2 from '../../../../BannerImage/banner2.jpeg';
+import banner3 from '../../../../BannerImage/banner3.jpg';
+const bannerImages = [
+  {
+    "id": 1,
+    "title": "America",
+    "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "image": banner1
+  },
+  {
+    "id": 2,
+    "title": "Brazil",
+    "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "image": banner2
+  },
+  {
+    "id": 3,
+    "title": "Nepal",
+    "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "image": banner3
+  }
+]
+console.log(bannerImages);
 const Banner = () => {
+  
     return (
-      <div className="">
-        <Carousel >
-          <Carousel.Item className="h-50">
-            <img
-              className="d-block w-100"
-              src="https://cdn.photoworkout.com/wp-content/uploads/2018/06/Travel-Photography-Tips.jpg"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://www.picsofasia.com/wp-content/uploads/2019/10/cropped-DSCF1599-3.jpg"
-              alt="Second slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block  w-100"
-              src="https://worldoftravelphotography.com/wp-content/uploads/2018/08/Things-I-learned-as-a-travel-photograher.jpg"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
+        <Carousel>
+          {bannerImages.map((banner) => 
+            <Carousel.Item key={banner.id}>
+              <img
+                className="d-block w-100"
+                style={{height: "450px"}}
+                src={banner.image}
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>{banner.title}</h3>
+                <p>{banner.description}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          )}
         </Carousel>
-      </div>
     );
 };
 

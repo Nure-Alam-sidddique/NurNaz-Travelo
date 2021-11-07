@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
-import BookingPlace from './Component/BookingPlace/BookingPlace';
+import BookingDetails from './Component/BookingDetails/BookingDetails';
 import PageNotFound from './Component/PageNotFound/PageNotFound';
 import About from './Component/Pages/Body/About/About';
 import Contact from './Component/Pages/Body/Contact/Contact';
@@ -13,6 +13,7 @@ import Footer from './Component/Pages/Footer/Footer';
 import Header from './Component/Pages/Header/Header';
 import Home from './Component/Pages/Home/Home/Home';
 import Login from './Component/Pages/Login/Login';
+import Myorders from './Component/Pages/Myorders/Myorders';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import UpdateServices from './Component/UpdateService/UpdateServices';
 import AuthProvider from './Context/AuthProvider';
@@ -30,14 +31,21 @@ function App() {
               <Destination></Destination>
             </PrivateRoute>
             <Route path='/login' component={Login}/>
-            <Route exact path="/services" component={Services} />
-            <Route path="/servicemanage" component={ServiceMange} />
-            <Route path="/booking/:bookingId">
-                <BookingPlace></BookingPlace>
-            </Route>
+            <PrivateRoute exact path="/services" >
+              <Services></Services>
+            </PrivateRoute>
+            <PrivateRoute path="/servicemanage">
+              <ServiceMange></ServiceMange>
+            </PrivateRoute>
             <Route exact path="/services/update/:updateId">
               <UpdateServices></UpdateServices>
             </Route>
+            <PrivateRoute path='/booking/:bookingId'>
+               <BookingDetails></BookingDetails>
+            </PrivateRoute>
+            <PrivateRoute path='/myorders'>
+               <Myorders></Myorders>
+            </PrivateRoute>
             <Route path="/servicemanage/:placeId" component={ServiceMange} />
             <Route path="/contact" component={Contact} />
             <Route path="*" component={PageNotFound}/>

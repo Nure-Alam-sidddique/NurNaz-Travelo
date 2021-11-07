@@ -19,7 +19,7 @@ const PopularDestination = () => {
                 <p className="align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nemo est corporis laudantium, excepturi itaque et quos soluta dolorem repellat.</p>
             </div>
         <Row xs={1} md={4} className="g-4">
-         {destinations.slice(0,8).map(destination=><DestinationsCard key={destination.id} destination={destination}></DestinationsCard>)}
+         {destinations.map(destination=><DestinationsCard key={destination._id} destination={destination}></DestinationsCard>)}
         </Row>
       </div>
     );

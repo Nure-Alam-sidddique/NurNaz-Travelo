@@ -1,6 +1,7 @@
 import Button from '@restart/ui/esm/Button';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const ServiceMange = () => {
     const [service, setService] = useState([]);
@@ -22,18 +23,30 @@ const ServiceMange = () => {
         });
     }
     return (
-      <div>
+      <section>
         <h1>This is Service Manage Page</h1>
-        {service.map((place) => (
-          <div>
-            <p>{place.placeName}</p>
-            <Button onClick={() => handleDelete(place._id)}>Delete</Button>
-            <Link to={`/services/update/${place._id}`}>
-              <Button>Update</Button>
-            </Link>
-          </div>
-        ))}
-      </div>
+        <Row xs={1} md={4} className="g-4">
+          {service.map((place) => (
+            <Col>
+              <Card>
+                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Body>
+                  <Card.Title>{place.placeName}</Card.Title>
+                  <Card.Text>
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </Card.Text>
+                  <Button variant="danger" onClick={() => handleDelete(place._id)} className="bg-danger">Delete</Button>
+                <Link to={`/services/update/${place._id}`}>
+                  <Button variant='success' className="bg-success ms-2">Update</Button>
+                </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </section>
     );
 };
 

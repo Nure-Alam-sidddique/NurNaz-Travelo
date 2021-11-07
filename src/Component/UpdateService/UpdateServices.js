@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import './UpdateService.css';
 
 const UpdateServices = () => {
     const { updateId } = useParams();
@@ -26,6 +27,13 @@ const UpdateServices = () => {
         setServiceUpdate(updatedData);
         e.preventDefault();
     }
+    const handlePriceUpdater = e => {
+        const priceUpdate = e.target.value;
+        const updatedData = { ...serviceUpdate };
+        updatedData.priceUpdate = priceUpdate;
+        setServiceUpdate(updatedData);
+        e.preventDefault();
+    }
     const handleUpdateInfo = e => {
         const url = `http://localhost:5000/services/${updateId}`;
         fetch(url, {
@@ -43,15 +51,28 @@ const UpdateServices = () => {
         e.preventDefault();
     }
     return (
-        <div>
-            <h1>Update Service {updateId }</h1>
-            <h1>Name :  { serviceUpdate.placeName}</h1>
-            <form onSubmit={handleUpdateInfo}>
-                <input type='text' onChange={handleNameUpdater} value={ serviceUpdate.placeName || ' '}/>
-                <input type='text' onChange={handleImageUpdater} value={serviceUpdate.imageURL || ' '} />
-                <Button type='submit'>Update</Button>
-            </form>
-        </div>
+      <div className="add-services-form">
+        <h1>Update Service {updateId}</h1>
+        <h1>Name : {serviceUpdate.placeName}</h1>
+        <form onSubmit={handleUpdateInfo} className="mb-5">
+          <input
+            type="text"
+            onChange={handleNameUpdater}
+            value={serviceUpdate.placeName || " "}
+          />
+          <input
+            type="number"
+            onChange={handlePriceUpdater}
+            value={serviceUpdate.price}
+          />
+          <input
+            type="text"
+            onChange={handleImageUpdater}
+            value={serviceUpdate.imageURL || " "}
+          />
+          <Button type="submit">Update</Button>
+        </form>
+      </div>
     );
 };
 

@@ -29,11 +29,11 @@ const Services = () => {
           />
           <textarea
             placeholder="Place Description"
-            {...register("placeDescription")}
+            {...register("description")}
           />
           <input placeholder="Price" type="number" {...register("price")} />
           <input
-            placeholder="Image URL"
+            placeholder="./assets/images/photoName(.jpg/.jpeg)"
             {...register("imageURL")}
           />
           <input type="submit" />
