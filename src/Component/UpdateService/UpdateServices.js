@@ -52,26 +52,26 @@ const UpdateServices = () => {
     }
     return (
       <div className="add-services-form">
-        <h1 className="text-align text-primary">Update Service</h1>
-        <h1>Name : {serviceUpdate.placeName}</h1>
+        <h1 className="text-align text-primary mt-3 mb-4">Update Service</h1>
+        {/* <h1>Name : {serviceUpdate.placeName}</h1> */}
         <form onSubmit={handleUpdateInfo} className="mb-5">
           <input
-          placeholder="placeName"
+          placeholder="PlaceName"
             type="text"
             onChange={handleNameUpdater}
-            value={serviceUpdate.placeName || " "}
+            value={serviceUpdate.placeName || ""}
           />
           <input
             placeholder="Price"
             type="number"
             onChange={handlePriceUpdater}
-             value ={serviceUpdate.price}
+             value ={serviceUpdate.price || ""}
           />
           <input
             placeholder="ImageURL"
             type="text"
             onChange={handleImageUpdater}
-            value={serviceUpdate.imageURL || " "}
+            value={serviceUpdate.imageURL || ""}
           />
           <Button type="submit">Update</Button>
         </form>
