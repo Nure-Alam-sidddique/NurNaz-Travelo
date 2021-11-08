@@ -7,16 +7,19 @@ const Destination = () => {
   const [places, setPlaces] = useState([]);
   const [loading, setLoading] = useState(false);
   const placeLoading = async () => {
-    axios("https://nurnaztravelo.web.app/services").then((res) => {
-      setPlaces(res.data);
-      setLoading(true);
-    });
+    axios("https://whispering-fortress-90757.herokuapp.com/services").then(
+      (res) => {
+        setPlaces(res.data);
+        setLoading(true);
+      }
+    );
   }
   useEffect(() => {
     placeLoading();
   },[])
     return (
-      <div className="mt-5">
+      <div className="mt-2">
+        <h1 className="text-center text-primary mb-4">Destination</h1>
         <Row xs={1} md={4} className="g-4">
           {loading ? (
             places.map((place) => (

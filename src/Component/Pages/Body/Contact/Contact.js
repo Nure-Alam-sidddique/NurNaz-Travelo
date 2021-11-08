@@ -5,11 +5,13 @@ import './Contact.css';
 const Contact = () => {
      const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
-        axios.post("https://nurnaztravelo.web.app/users", data).then((res) => {
-          if (res.data.insertedId) {
-            alert("Data Successfully Send");
-          }
-        });
+        axios
+          .post("https://whispering-fortress-90757.herokuapp.com/users", data)
+          .then((res) => {
+            if (res.data.insertedId) {
+              alert("Data Successfully Send");
+            }
+          });
         console.log(data)
         reset();
     };

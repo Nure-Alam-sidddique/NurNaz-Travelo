@@ -5,13 +5,13 @@ import OrderCard from '../OrderCard/OrderCard';
 const Myorders = () => {
     const [myorders, setMyorders] = useState([]);
     useEffect(() => {
-        axios("https://nurnaztravelo.web.app/myorders").then((res) =>
-          setMyorders(res.data)
+        axios("https://whispering-fortress-90757.herokuapp.com/myorders").then(
+          (res) => setMyorders(res.data)
         );
     }, [])
     // console.log(myorders);
       const handleDelete = (id) => {
-        const url = `https://nurnaztravelo.web.app/booking/${id}`;
+        const url = `https://whispering-fortress-90757.herokuapp.com/booking/${id}`;
         axios.delete(url).then((res) => {
           if (res.data.deletedCount) {
             alert("Deleted Successfully");

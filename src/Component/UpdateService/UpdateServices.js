@@ -52,7 +52,7 @@ const UpdateServices = () => {
     }
     return (
       <div className="add-services-form">
-        <h1>Update Service {updateId}</h1>
+        <h1 className="text-align text-primary">Update Service</h1>
         <h1>Name : {serviceUpdate.placeName}</h1>
         <form onSubmit={handleUpdateInfo} className="mb-5">
           <input
@@ -63,7 +63,7 @@ const UpdateServices = () => {
           <input
             type="number"
             onChange={handlePriceUpdater}
-            value={serviceUpdate.price}
+             value ={serviceUpdate.price}
           />
           <input
             type="text"

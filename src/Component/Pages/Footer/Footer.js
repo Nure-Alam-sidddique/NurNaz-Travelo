@@ -54,7 +54,7 @@ const Footer = () => {
                 >
                   Switzerland
                 </Link>
-                <Link className="text-black text-decoration-none" to="/franch">
+                <Link className="text-white text-decoration-none" to="/franch">
                   Franch
                 </Link>
               </div>

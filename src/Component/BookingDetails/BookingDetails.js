@@ -10,7 +10,7 @@ const BookingPlace = () => {
   const { user } = useAuth();
     const { bookingId } = useParams()
     const [booking, setBooking] = useState([]);
-  const url = `https://nurnaztravelo.web.app/singleService/${bookingId}`;
+  const url = `https://whispering-fortress-90757.herokuapp.com/singleService/${bookingId}`;
   useEffect(() => {
     axios(url).then(res => setBooking(res.data));
   },[])
@@ -24,7 +24,7 @@ const BookingPlace = () => {
   const onSubmit = (data) => {
     data.price = price;
     data.imageURL = imageURL;
-    axios.post("https://nurnaztravelo.web.app/orderConfirm", data).then(res =>
+    axios.post("https://whispering-fortress-90757.herokuapp.com/orderConfirm", data).then(res =>
     {
       if (res.data.insertedId) {
         alert("Data Successfully Send");

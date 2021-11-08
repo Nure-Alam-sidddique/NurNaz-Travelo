@@ -8,7 +8,7 @@ const Services = () => {
   const [placeName, setPlaceName] = useState([]);
     const onSubmit = (data) => {
         // console.log(data);
-      axios.post("https://nurnaztravelo.web.app/services", data).then((res) => {
+      axios.post("https://whispering-fortress-90757.herokuapp.com/services", data).then((res) => {
         if (res.data.insertedId) {
           alert("Data SuccessFully Send");
         }
@@ -16,8 +16,8 @@ const Services = () => {
         reset();
      } ;
   useEffect(() => {
-  axios("https://nurnaztravelo.web.app/services").then((res) =>
-    console.log(res.data)
+  axios("https://whispering-fortress-90757.herokuapp.com/services").then(
+    (res) => console.log(res.data)
   );
 }, [])
   

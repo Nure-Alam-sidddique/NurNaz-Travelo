@@ -8,9 +8,7 @@ const PopularPlace = () => {
   const [loading, setLoading] = useState(false);
   const popularPalceLoading = async () => {
     try {
-      await axios(
-        "https://whispering-fortress-90757.herokuapp.com/services"
-      ).then((res) => setPlace(res.data));
+      await axios("https://whispering-fortress-90757.herokuapp.com/services").then((res) => setPlace(res.data));
       setLoading(true);
     }
     catch (e) {
