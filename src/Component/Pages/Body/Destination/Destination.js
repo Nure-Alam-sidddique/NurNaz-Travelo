@@ -7,10 +7,10 @@ const Destination = () => {
   const [places, setPlaces] = useState([]);
   const [loading, setLoading] = useState(false);
   const placeLoading = async () => {
-    axios("http://localhost:5000/services").then(res => {
+    axios("https://nurnaztravelo.web.app/services").then((res) => {
       setPlaces(res.data);
       setLoading(true);
-    })
+    });
   }
   useEffect(() => {
     placeLoading();

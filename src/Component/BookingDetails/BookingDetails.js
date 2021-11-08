@@ -10,7 +10,7 @@ const BookingPlace = () => {
   const { user } = useAuth();
     const { bookingId } = useParams()
     const [booking, setBooking] = useState([]);
-  const url = `http://localhost:5000/singleService/${bookingId}`;
+  const url = `https://nurnaztravelo.web.app/singleService/${bookingId}`;
   useEffect(() => {
     axios(url).then(res => setBooking(res.data));
   },[])

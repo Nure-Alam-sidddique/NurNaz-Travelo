@@ -2,72 +2,82 @@
   {
     "key": "AMERICA001",
     "placeName": "America",
+    "date": "19/11/2021",
     "price": 1500,
     "description": "The Granite State’s White Mountains are THE place to be come leaf-peeping season",
-    "imageURL": "./assets/images/america.jpeg"
+    "imageURL": "https://img.budgettravel.com/_galleryImage/golden-gate-bridge-san-francisco-952012-114744_original.jpeg"
   },
 
   {
     "key": "BRAZIL002",
     "placeName": "Brazil",
+    "date": "19/11/2021",
     "price": 1200,
     "description": "visitors from all around the world converge on the rim of Crater Lake to stare down upon its pristine surface",
-    "imageURL": "./assets/images/brazil.jpeg"
+    "imageURL": "https://www.pandotrip.com/wp-content/uploads/2016/02/Rio3-1-980x699.jpg"
   },
   {
     "key": "BRAZIL003",
     "placeName": "Brazil",
+    "date": "19/11/2021",
     "price": 1200,
     "description": "The Palouse’s most recognizable feature is its loess hills—whimsical rolling knolls formed by wind-blown sediment",
-    "imageURL": "./assets/images/brazil2.jpeg"
+    "imageURL": "https://cdn.thecoolist.com/wp-content/uploads/2021/07/Best-Places-to-Visit-in-Brazil-Iguazu-Falls-e1628972267859.jpg"
   },
   {
     "key": "NEPAL004",
     "placeName": "Nepal",
+    "date": "19/11/2021",
     "price": 500,
     "description": "Nepal is a surprisingly diverse country that attracts visitors for many reasons.",
-    "imageURL": "./assets/images/nepal.jpg"
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Ice_%26_sun_on_Gosaikunda_lake.jpg"
   },
   {
     "key": "NEPAL005",
     "placeName": "Nepal",
+    "date": "19/11/2021",
     "price": 600,
     "description": "Nepal is a surprisingly diverse country that attracts visitors for many reasons.",
-    "imageURL": "./assets/images/nepal2.jpeg"
+    "imageURL": "https://www.nepalsanctuarytreks.com/wp-content/uploads/2017/10/DSC09858.jpg"
   },
   {
     "key": "MALDIVES006",
     "placeName": "Maldevies",
+    "date": "19/11/2021",
     "price": 1000,
     "description": "Maldevies is a surprisingly diverse country that attracts visitors for many reasons.",
-    "imageURL": "./assets/images/maldevis.jpeg"
+    "imageURL": "https://passionbuz.com/wp-content/uploads/2018/09/restaurant-underwater-maldives.jpg"
   },
   {
     "key": "MALDIVES007",
     "placeName": "Maldeives",
+    "date": "19/11/2021",
     "price": 1000,
     "description": " Maldeives is a surprisingly diverse country that attracts visitors for many reasons.",
-    "imageURL": "./assets/images/nepal.jpg"
+    "imageURL": "https://i.ytimg.com/vi/qdjYps4iWTQ/maxresdefault.jpg"
   },
   {
     "key": "ROME008",
     "placeName": "Rome",
+    "date": "19/11/2021",
     "price": 1300,
     "description": "Rome is a surprisingly diverse country that attracts visitors for many reasons.",
-    "imageURL": "./assets/images/rome.jpg"
+    "imageURL": "https://www.touropia.com/gfx/b/2011/02/trevi_fountain2.jpg"
   },
   {
     "key": "MISOR009",
     "placeName": "Misor",
+    "date": "19/11/2021",
     "price": 1800,
     "description": "Misor is a surprisingly diverse country that attracts visitors for many reasons.",
-    "imageURL": "./assets/images/misor.jpeg"
+    "imageURL": "http://alliswall.com/file/178/1920x1200/16:9/beautiful-place-at-misor.jpg"
   },
   {
     "key": "ITALY",
     "placeName": "Italy",
+    "date": "19/11/2021",
     "price": 1600,
     "description": "Italy is a surprisingly diverse country that attracts visitors for many reasons.",
-    "imageURL": "./assets/images/italy.jpg"
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY4jzVeaTwC-EdCjbdpWFTsD2cmW1qGbnvEw&usqp=CAU"
   }
 ]

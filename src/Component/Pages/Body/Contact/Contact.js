@@ -5,11 +5,11 @@ import './Contact.css';
 const Contact = () => {
      const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
-        axios.post('http://localhost:5000/users', data).then(res => {
-            if (res.data.insertedId) {
-                alert("Data Successfully Send");
-            }
-        })
+        axios.post("https://nurnaztravelo.web.app/users", data).then((res) => {
+          if (res.data.insertedId) {
+            alert("Data Successfully Send");
+          }
+        });
         console.log(data)
         reset();
     };

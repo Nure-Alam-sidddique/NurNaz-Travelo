@@ -7,7 +7,7 @@ import './UpdateService.css';
 const UpdateServices = () => {
     const { updateId } = useParams();
     const [serviceUpdate, setServiceUpdate] = useState({});
-    const url = `http://localhost:5000/services/${updateId}`;
+    const url = `https://nurnaztravelo.web.app/services/${updateId}`;
     useEffect(() => {
         axios(url).then(res => setServiceUpdate(res.data));
     }, [])
