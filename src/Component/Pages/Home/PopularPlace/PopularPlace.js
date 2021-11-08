@@ -23,11 +23,10 @@ const PopularPlace = () => {
     return (
       <section>
         <div>
-          <h1>Popular Palce</h1>
+          <h1 className="text-align-center text-primary mt-4 mb-2">Popular Palce</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            maxime quas explicabo sint vero quis earum quod eveniet adipisci
-            doloremque.
+            Travelers are always looking for inspiration to guide their
+            adventures
           </p>
         </div>
         <Row xs={1} md={4} className="g-4">
@@ -35,8 +34,6 @@ const PopularPlace = () => {
             places.slice(0, 8).map((place) => (
               <Col key={place._id}>
                 <Card className="h-50">
-                  {/* <Card.Img variant="top" src={place.imageURL} />
-                <Card.Body className={{zindexPopover: 1070}}>{place.placeName}</Card.Body> */}
                   <figure className="position-relative">
                     <img
                       style={{ width: "100%", height: "200px" }}

@@ -11,14 +11,19 @@ const Myorders = () => {
     }, [])
     // console.log(myorders);
       const handleDelete = (id) => {
-        const url = `https://whispering-fortress-90757.herokuapp.com/booking/${id}`;
-        axios.delete(url).then((res) => {
-          if (res.data.deletedCount) {
-            alert("Deleted Successfully");
-            const remaining = myorders.filter((place) => place._id !== id);
-            setMyorders(remaining);
-          }
-        });
+        const procced = window.confirm('Are you sure you want to delete your Order?');
+        if (procced) {
+            const url = `https://whispering-fortress-90757.herokuapp.com/booking/${id}`;
+            axios.delete(url).then((res) => {
+              if (res.data.deletedCount) {
+                alert("Deleted Successfully");
+                const remaining = myorders.filter((place) => place._id !== id);
+                setMyorders(remaining);
+              }
+            });
+          
+        }
+      
       };
     return (
       <div>

@@ -36,9 +36,9 @@ const BookingPlace = () => {
     return (
       <section>
         <Container>
-          <h1>My BeautiFul booking {bookingId}</h1>
+          <h1 className="text-align-center text-primary mt-3 mb-4">Your Booking Package</h1>
           <Row>
-            <Col className={{ my: "10px" }}>
+            <Col className={{ my: "10px"  }}>
               <Card>
                 <Card.Img
                   variant="top"
@@ -48,10 +48,11 @@ const BookingPlace = () => {
                 <Card.Body>
                   <Card.Title>{placeName}</Card.Title>
                   <Card.Text>{description}</Card.Text>
+                  <Card.Text>Price: ${price}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            <Col className="add-services-form">
+            <Col className="add-services-form mt-5">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                   defaultValue={user.displayName}

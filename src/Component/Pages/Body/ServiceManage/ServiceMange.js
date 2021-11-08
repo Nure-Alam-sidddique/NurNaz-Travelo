@@ -21,7 +21,7 @@ const ServiceMange = () => {
     // console.log(service);
 
     const handleDelete = id => {
-      const procceed = window.confirm("Are you sure want to delete you?");
+      const procceed = window.confirm("Are you sure want to delete you item?");
       if (procceed) {
         const url = `https://whispering-fortress-90757.herokuapp.com/services/${id}`;
         axios.delete(url).then((res) => {

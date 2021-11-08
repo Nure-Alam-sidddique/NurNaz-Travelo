@@ -26,11 +26,10 @@ const PopularDestination = () => {
     return (
       <div>
         <div>
-          <h1 className="align-center">Popular Destination</h1>
+          <h1 className="align-center text-primary mt-3 mb-2">Popular Destination</h1>
           <p className="align-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nemo
-            est corporis laudantium, excepturi itaque et quos soluta dolorem
-            repellat.
+            The world is filled with such a wide variety of wonderful
+            destinations and beautiful places
           </p>
         </div>
         <Row xs={1} md={4} className="g-4">
@@ -42,7 +41,11 @@ const PopularDestination = () => {
               ></DestinationsCard>
             ))
           ) : (
-            <Spinner className="m-auto p-4 mt-3" animation="border" variant="primary" />
+            <Spinner
+              className="m-auto p-4 mt-3"
+              animation="border"
+              variant="primary"
+            />
           )}
         </Row>
       </div>
