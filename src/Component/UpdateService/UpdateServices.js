@@ -56,16 +56,19 @@ const UpdateServices = () => {
         <h1>Name : {serviceUpdate.placeName}</h1>
         <form onSubmit={handleUpdateInfo} className="mb-5">
           <input
+          placeholder="placeName"
             type="text"
             onChange={handleNameUpdater}
             value={serviceUpdate.placeName || " "}
           />
           <input
+            placeholder="Price"
             type="number"
             onChange={handlePriceUpdater}
              value ={serviceUpdate.price}
           />
           <input
+            placeholder="ImageURL"
             type="text"
             onChange={handleImageUpdater}
             value={serviceUpdate.imageURL || " "}

@@ -60,5 +60,3 @@ function App() {
 }
 
 export default App;
-// https://preview.colorlib.com/#travelo 
-// https://preview.colorlib.com/theme/travelo/
