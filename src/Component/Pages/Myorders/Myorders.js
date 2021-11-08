@@ -27,7 +27,9 @@ const Myorders = () => {
       };
     return (
       <div>
+      <h1 className="text-align-center text-primary mt-4 mb-3">My Orders</h1>
         <Row xs={1} md={2} className="g-4">
+
           {
             myorders.map(order=><OrderCard key={order._id} orders={order} handleDelete={handleDelete}></OrderCard>)
           }

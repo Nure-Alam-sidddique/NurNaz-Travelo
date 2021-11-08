@@ -24,12 +24,12 @@ const Header = () => {
   }
     return (
       <div>
-        <Navbar bg="dark" expand="lg" >
+        <Navbar bg="dark" expand="lg" className="fixed-top " style={{opacity: 0.9}} >
           <Container fluid >
             <NavLink
               className="text-white-50 text-decoration-none fs-3 px-2"
               as={HashLink}
-              to="/home#home"
+              to="/home"
             >
               NurNaz Travelo
             </NavLink>

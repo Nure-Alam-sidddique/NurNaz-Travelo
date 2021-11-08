@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
 const OrderCard = (props) => {
-    const { imageURL, userName, _id } = props.orders;
+    const { imageURL, userName, _id , price} = props.orders;
     console.log(props);
     return (
       <Col>
@@ -15,7 +15,8 @@ const OrderCard = (props) => {
            This is a longer card with supporting text below as a natural
            lead-in to additional content. This content is a little bit
               longer.
-         </Card.Text>
+            </Card.Text>
+            <Card.Text>Price : ${ price}</Card.Text>
             <Button variant="outline-danger" className="bg-danger border-outline-none px-3 py-1 text-white" onClick={()=>props.handleDelete(_id)}>Cancle</Button>
         </Card.Body>
     </Card>

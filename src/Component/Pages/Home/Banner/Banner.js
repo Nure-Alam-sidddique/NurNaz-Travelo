@@ -30,7 +30,7 @@ console.log(bannerImages);
 const Banner = () => {
   
     return (
-        <Carousel>
+        <Carousel style={{marginTop:56}}>
           {bannerImages.map((banner) => 
             <Carousel.Item key={banner.id}>
               <img

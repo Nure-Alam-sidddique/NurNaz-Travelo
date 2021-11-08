@@ -5,7 +5,7 @@ const RecentTrips = () => {
     return (
       <div>
         <div>
-          <h1>Recent Trips</h1>
+          <h1 className="text-align-center text-primary mt-3 mb-4">Recent Trips</h1>
         </div>
         <Row xs={1} md={2} className="g-4">
           {Array.from({ length: 4 }).map((_, idx) => (

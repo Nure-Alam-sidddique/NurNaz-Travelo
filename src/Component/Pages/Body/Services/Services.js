@@ -23,7 +23,7 @@ const Services = () => {
   
     return (
       <div className="add-services-form">
-        <h1>This is Services Page</h1>
+        <h1 className="text-align-center text-primary mt-3 mb-4"> Add Service</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             placeholder="Place Name"
