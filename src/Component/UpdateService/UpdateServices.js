@@ -7,11 +7,11 @@ import './UpdateService.css';
 const UpdateServices = () => {
     const { updateId } = useParams();
     const [serviceUpdate, setServiceUpdate] = useState({});
-    const url = `https://nurnaztravelo.web.app/services/${updateId}`;
+    const url = `https://whispering-fortress-90757.herokuapp.com/services/${updateId}`;
     useEffect(() => {
         axios(url).then(res => setServiceUpdate(res.data));
     }, [])
-    console.log('Comees forme upsdate', serviceUpdate);
+    // console.log('Comees forme upsdate', serviceUpdate);
 
     const handleNameUpdater = (e) => {
         const placeName = e.target.value;
@@ -35,7 +35,7 @@ const UpdateServices = () => {
         e.preventDefault();
     }
     const handleUpdateInfo = e => {
-        const url = `https://nurnaztravelo.web.app/services/${updateId}`;
+        const url = `https://whispering-fortress-90757.herokuapp.com/${updateId}`;
         fetch(url, {
           method: "PUT",
           headers: { "content-type": "application/json" },
