@@ -35,7 +35,7 @@ const UpdateServices = () => {
         e.preventDefault();
     }
     const handleUpdateInfo = e => {
-        const url = `https://whispering-fortress-90757.herokuapp.com/${updateId}`;
+        const url = `https://whispering-fortress-90757.herokuapp.com/services/${updateId}`;
         fetch(url, {
           method: "PUT",
           headers: { "content-type": "application/json" },
@@ -43,7 +43,7 @@ const UpdateServices = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            if (data.modifiedCount > 0) {
+            if (data.modifiedCount) {
               alert("Updated Successfully");
               setServiceUpdate({});
             }
