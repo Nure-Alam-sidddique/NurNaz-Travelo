@@ -43,7 +43,7 @@ const UpdateServices = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            if (data.modifiedCount) {
+            if (data.modifiedCount> 0) {
               alert("Updated Successfully");
               setServiceUpdate({});
             }
